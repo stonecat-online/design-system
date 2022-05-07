@@ -1,0 +1,11 @@
+import {{ properCase name }} from "../../../src/shared/templateComponents/{{ atomicType }}/{{ properCase name }}";
+
+export default {
+  title: "Template Components/{{ atomicType }}/{{ properCase name }}",
+  component: {{ properCase name }},
+};
+
+const Template = (args) => <{{ properCase name }} {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = { ...Primary.args, };

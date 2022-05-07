@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📖 Design system
 
-## Getting Started
+The environment for development and display of shared presentational components and themes.
 
-First, run the development server:
+## 🚀 Getting started
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- clone shared components repr (https://github.com/Perlego/shared-components) into src/exportable
+- run npm i
+- to run locally:
+  `npm run storybook`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚅 Quick tips
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- create new templated component:
+  `npm run generate`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 📦 Creating new components
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+To add a new component, just run `npm run generate`. This command will generate all the component (Stateless or not) files for you. A default option will be displayed in brackets.
 
-## Learn More
+This process adds a component into the exportable folder at the appriate atomic level.
 
-To learn more about Next.js, take a look at the following resources:
+This process is handled by plop, a templating library, which can be configured in the .plop folder.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔲 Adding UI testing elements (toggles, text values etc.)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Addons are utilized to allow users to toggle states, set values etc. These addons need to be configured in the src/stories folder
 
-## Deploy on Vercel
+## 🐛 Testing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To test your components run `npm test`.
+By default we should run tests and lint before any push.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## ↗ Deploying storybook
+
+To deploy storybook to Github Pages run `npm run deploy-storybook`.
