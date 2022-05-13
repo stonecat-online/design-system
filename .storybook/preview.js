@@ -1,9 +1,7 @@
 import React from "react";
-import cssVariablesTheme from "@etchteam/storybook-addon-css-variables-theme";
-import global from "../src/shared/theme/global.css";
-import light from "!!style-loader?injectType=lazyStyleTag!css-loader!../src/styles/light.css";
-import dark from "!!style-loader?injectType=lazyStyleTag!css-loader!../src/styles/dark.css";
-// .storybook/preview.js
+import { ThemeProvider } from "styled-components";
+import theme from "../src/shared/theme";
+import { GlobalStyles } from "./../src/shared/theme/global";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -13,20 +11,13 @@ export const parameters = {
       date: /Date$/,
     },
   },
-  cssVariables: {
-    files: {
-      "Light Theme": light,
-      "Dark Theme": dark,
-    },
-    defaultTheme: "Light Theme",
-  },
 };
 
 export const decorators = [
-  cssVariablesTheme,
   (Story) => (
-    <div style={global}>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <Story />
-    </div>
+    </ThemeProvider>
   ),
 ];

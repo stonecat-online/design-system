@@ -24,8 +24,8 @@ const componentGenerator = {
       },
       {
         type: "add",
-        path: "../src/shared/components/{{atomicType}}/{{properCase name}}/{{properCase name}}.module.css",
-        templateFile: "./componentName.module.css.hbs",
+        path: "../src/shared/components/{{atomicType}}/{{properCase name}}/{{properCase name}}.styled.jsx",
+        templateFile: "./componentName.styled.jsx.hbs",
         abortOnFail: true,
       },
       {
@@ -71,8 +71,8 @@ const templateComponentGenerator = {
       },
       {
         type: "add",
-        path: "../src/shared/templateComponents/{{atomicType}}/{{properCase name}}/{{properCase name}}.module.css",
-        templateFile: "./templateComponentName.module.css.hbs",
+        path: "../src/shared/templateComponents/{{atomicType}}/{{properCase name}}/{{properCase name}}.styled.jsx",
+        templateFile: "./templateComponentName.styled.jsx.hbs",
         abortOnFail: true,
       },
       {
