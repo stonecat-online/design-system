@@ -15,6 +15,6 @@ Primary.args = {
   p: "",
   imgSrc:
     "https://images.pexels.com/photos/3906112/pexels-photo-3906112.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-  inverted: false,
+  inverted: true,
   bg: "black",
 };
